@@ -129,9 +129,9 @@ var DateTimePickerDays = createClass({
 
 			isDisabled = !isValid(currentDate, selected);
 			if (isDisabled) classes += " rdtDisabled";
-			if (days.length === 1) {
+			if (days.length === 0) {
 				classes += " rdt-first-day";
-			} else if (days.length === 7) {
+			} else if (days.length === 6) {
 				classes += " rdt-last-day";
 			} else {
 				classes += " rdt-middle-days";
