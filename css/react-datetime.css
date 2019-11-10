@@ -216,3 +216,21 @@ td.rdtYear:hover {
 .rdtTime td {
 	cursor: default;
 }
+
+.rdt-middle-days {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.rdt-last-Day {
+	border-right: 1px solid black;
+	border-radius: 0px 7px 7px 0px;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.rdt-first-day {
+	border-left: 1px solid black;
+	border-radius: 7px 0px 0px 7px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}

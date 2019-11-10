@@ -129,6 +129,13 @@ var DateTimePickerDays = createClass({
 
 			isDisabled = !isValid(currentDate, selected);
 			if (isDisabled) classes += " rdtDisabled";
+			if (days.length === 1) {
+				classes += " rdt-first-day";
+			} else if (days.length === 7) {
+				classes += " rdt-last-day";
+			} else {
+				classes += " rdt-middle-days";
+			}
 
 			dayProps = {
 				key: prevMonth.format("M_D"),
@@ -150,12 +157,14 @@ var DateTimePickerDays = createClass({
 		}
 		var newWeeks = [];
 		for (var i = 0; i < 3; i++) {
-			var weekDays = weeks[i].props.children.concat(weeks[i + 3].props.children);
+			var weekDays = weeks[i].props.children.concat(
+				weeks[i + 3].props.children
+			);
 
 			newWeeks.push(
 				React.createElement(
 					"tr",
-					{ key: weeks[i].key+'_'+weeks[i + 2] },
+					{ key: weeks[i].key + "_" + weeks[i + 2] },
 					weekDays
 				)
 			);

@@ -1,5 +1,5 @@
 /*
-react-datetime v2.16.3
+react-datetime-vcal v2.16.3
 https://github.com/YouCanBookMe/react-datetime
 MIT: https://github.com/YouCanBookMe/react-datetime/raw/master/LICENSE
 */
@@ -3537,6 +3537,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 				isDisabled = !isValid(currentDate, selected);
 				if (isDisabled) classes += " rdtDisabled";
+				if (days.length === 1) {
+					classes += " rdt-first-day";
+				} else if (days.length === 7) {
+					classes += " rdt-last-day";
+				} else {
+					classes += " rdt-middle-days";
+				}
 
 				dayProps = {
 					key: prevMonth.format("M_D"),
@@ -3558,12 +3565,14 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 			var newWeeks = [];
 			for (var i = 0; i < 3; i++) {
-				var weekDays = weeks[i].props.children.concat(weeks[i + 3].props.children);
+				var weekDays = weeks[i].props.children.concat(
+					weeks[i + 3].props.children
+				);
 
 				newWeeks.push(
 					React.createElement(
 						"tr",
-						{ key: weeks[i].key+'_'+weeks[i + 2] },
+						{ key: weeks[i].key + "_" + weeks[i + 2] },
 						weekDays
 					)
 				);
