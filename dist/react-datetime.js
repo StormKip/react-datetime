@@ -3564,7 +3564,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				prevMonth.add(1, "d");
 			}
 			var newWeeks = [];
-			for (var i = 0; i < 3; i++) {
+			for (var i = 0; i < 7; i + 2) {
 				var weekDays = weeks[i].props.children.concat(
 					weeks[i + 1].props.children
 				);
@@ -3572,7 +3572,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				newWeeks.push(
 					React.createElement(
 						"tr",
-						{ key: weeks[i].key + "_" + weeks[i + 2] },
+						{ key: weeks[i].key + "_" + weeks[i + 1] },
 						weekDays
 					)
 				);

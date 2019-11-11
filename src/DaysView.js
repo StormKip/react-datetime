@@ -164,7 +164,7 @@ var DateTimePickerDays = createClass({
 			newWeeks.push(
 				React.createElement(
 					"tr",
-					{ key: weeks[i].key + "_" + weeks[i + 2] },
+					{ key: weeks[i].key + "_" + weeks[i + 1] },
 					weekDays
 				)
 			);
