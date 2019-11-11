@@ -3566,7 +3566,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			var newWeeks = [];
 			for (var i = 0; i < 3; i++) {
 				var weekDays = weeks[i].props.children.concat(
-					weeks[i + 3].props.children
+					weeks[i + 1].props.children
 				);
 
 				newWeeks.push(
