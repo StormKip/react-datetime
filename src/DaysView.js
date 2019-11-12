@@ -156,7 +156,7 @@ var DateTimePickerDays = createClass({
 			prevMonth.add(1, "d");
 		}
 		var newWeeks = [];
-		for (var i = 0; i < 7;i+=2) {
+		for (var i = 0; i < 6;i+=2) {
 			var weekDays = weeks[i].props.children.concat(
 				weeks[i + 1].props.children
 			);
